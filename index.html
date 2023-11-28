@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>CoSeR: Bridging Image and Language for Cognitive Super-Resolution</title>
+  <link href="https://fonts.googleapis.com/css?family=Noto Serif" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <!-- <link rel="stylesheet" href="./static/css/bulma-slider.min.css"> -->
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <!-- <script src="./static/js/bulma-slider.min.js"></script> -->
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  </nav>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-2 publication-title">CoSeR: Bridging Image and Language for Cognitive Super-Resolution
+            </h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                Haoze Sun</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://fenglinglwb.github.io/" target="_blank">Wenbo Li</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://people.ucas.ac.cn/~jzliu?language=en" target="_blank">Jianzhuang Liu</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                Haoyu Chen</a><sup>3</sup>,</span>
+              <span class="author-block">
+                Renjing Pei</a><sup>2</sup>,</span>
+              <span class="author-block">
+                Xueyi Zou</a><sup>2</sup>,</span>
+              <span class="author-block">
+                Youliang Yan</a><sup>2</sup>,</span>
+              <span class="author-block">
+                Yujiu Yang</a><sup>1</sup>,</span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Tsinghua University,</span>
+              <span class="author-block"><sup>2</sup>Huawei Noah’s Ark Lab,</span>
+              <span class="author-block"><sup>3</sup>HKUST(GZ)</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <!-- <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2305.18729.pdf" class="button is-normal is-rounded is-dark" target="_blank">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span> -->
+                <!-- Arxiv Link. -->
+                <!-- <span class="link-block">
+                  <a href="https://arxiv.org/abs/2305.18729" class="external-link button is-normal is-rounded is-dark" target="_blank">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span> -->
+                <!-- Video Link. -->
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/VINHYU/CoSeR"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <section class="hero is-light is-small">
+
+        <div class="hero-body">
+          <p>
+            CoSeR is capable of extracting cognitive features from low-resolution (LR) images 
+            and generating high-quality reference images aligning closely with the LR image in terms of semantics and textures. 
+            The inclusion of the generated reference image along with the cognitive features serves to notably boost our super-resolution (SR) performance.
+          </p>
+          
+        </b>
+          <div class="container" style="text-align:center">
+            <br>
+            <div id="results-carousel" class="carousel results-carousel">
+              <div class="item item-exp1">
+                <img src="./static/images/teaser1.png" style="width:100%; " />
+              </div>
+              <div class="item item-exp2">
+                <img src="./static/images/teaser2.png" style="width:100%; " />
+              </div>
+              <div class="item item-exp3">
+                <img src="./static/images/teaser3.png" style="width:100%; " />
+              </div>
+              <div class="item item-exp3">
+                <img src="./static/images/teaser4.png" style="width:100%; " />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Existing super-resolution (SR) models primarily focus on restoring local texture details, 
+              often neglecting the global semantic information within the scene. This oversight can lead to the omission 
+              of crucial semantic details or the introduction of inaccurate textures during the recovery process. 
+              In our work, we introduce the <b>Co</b>gnitive <b>S</b>up<b>e</b>r-<b>R</b>esolution (CoSeR) framework, empowering SR models with 
+              the capacity to comprehend low-resolution images. We achieve this by marrying image appearance and language 
+              understanding to generate a cognitive embedding, which not only activates prior information from large text-to-image 
+              diffusion models but also facilitates the generation of high-quality reference images to optimize the SR process. 
+              To further improve image fidelity, we propose a novel condition injection scheme called "All-in-Attention", 
+              consolidating all conditional information into a single module. Consequently, our method successfully restores semantically 
+              correct and photorealistic details, demonstrating state-of-the-art performance across multiple benchmarks.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+      <section class="hero teaser">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered has-text-justified">
+            <div class="column is-four-fifths">
+              <br>
+              <img src="./static/images/motivation.png" width="100%" />
+              <br />
+              <br />
+              <h2 class="subtitle">
+                Motivation
+              </h2>
+              Our motivation is based on the following observations: <br />
+              <li> 
+                Existing SR methods face limitations in generalization, particularly when confronted with degradation distributions 
+                deviating from the training set (<b>first row of the figure above</b>). Typically, enhancing SR performance involves training the model on 
+                scene-specific data acquired from a particular sensor. While effective for learning the mapping between low and high definition 
+                images in specific scenes, this approach exhibits poor performance in diverse scenarios.
+                <br />
+              <li> 
+                Current SR methods lack a comprehensive understanding of image content. 
+                They primarily focus on learning image degradation patterns from extensive data, overlooking the semantic understanding of LR images. 
+                Consequently, these methods struggle to employ common sense in accurately recovering object structures and textures  (<b>second row of the figure above</b>).
+                <br />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="hero teaser">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered has-text-justified">
+            <div class="column is-four-fifths">
+              <br>
+              <div style="display: flex; justify-content: center; align-items: center;">
+                <img src="./static/images/pipeline.png" width="70%" />
+              </div>
+              <br />
+              <br />
+              <h2 class="subtitle">
+                Outline Pipeline
+              </h2>
+              Our method can extract <b style="color: #eab332">cognitive embedding</b> from a LR input image, 
+              comprehensively grasping the entire scene content. 
+              This cognitive embedding is then utilized to generate a high-resolution <b style="color: #67aaa3">reference image</b> 
+              that maintains semantic coherence. 
+              Finally, we use the cognitive embedding to activate the diffusion prior in our <b style="color: #a6a6a6">restoration network</b>, 
+              while employing the generated reference image as an additional prior to guide the SR process. We use <a href="https://huggingface.co/stabilityai/stable-diffusion-2-1-base">Stable Diffusion 2.1-base</a> in our model.
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- <section class="section">
+        <div class="container is-max-desktop"> -->
+
+      <!-- Comparisons. -->
+
+      <!--/ Comparisons. -->
+
+      <!-- Extensions. -->
+
+      <!-- <div class="columns is-centered">
+        <div class="column is-full-width"> -->
+      <!-- <div class="content"> -->
+
+      <!-- <p>
+            Descriptions for extensions.
+          </p> -->
+
+      <!-- Adaptation to 2D Stylization. -->
+
+      <!-- <div class="column is-full-width"> -->
+      <div class="content has-text-justified">
+        <br>
+        <h2 class="title is-3">Comparsions</h2>
+        <div style="display: flex; justify-content: center; align-items: center;">
+          <img src="./static/images/comp.png" width="100%" />
+        </div>
+        
+        <p>
+          Enriched by a comprehensive understanding of scene information, CoSeR excels in enhancing high-quality 
+          texture details. As demonstrated in the first and second rows, our results exhibit significantly clearer and 
+          more realistic fur and facial features in the animals. Similarly, in the third and fourth rows, 
+          our method adeptly reconstructs realistic textures such as the anemone tentacles and succulent leaves—achievements 
+          unmatched by other methods. Particularly, our model's cognitive capabilities enable the recovery of semantic details almost 
+          lost in low-resolution inputs. Notably, in the first row, only our model successfully restores the dhole's eyes, while in 
+          the fifth row, only our method can reconstruct the sand within the hourglass.
+        </p>
+        
+        <h3 class="title is-5">More comparsions on synthetic images.</h3>
+
+        <div class="container is-max-desktop">
+          <section class="hero is-light is-small">
+            <div class="hero-body">
+              <div class="container" style="text-align:center">
+                <div id="results-carousel" class="carousel results-carousel">
+                  <div class="item item-exp1">
+                    <img src="./static/images/comp_gen1.png" style="width:100%; " />
+                  </div>
+                  <div class="item item-exp2">
+                    <img src="./static/images/comp_gen2.png" style="width:100%; " />
+                  </div>
+                  <div class="item item-exp3">
+                    <img src="./static/images/comp_gen3.png" style="width:100%; " />
+                  </div>
+                  <div class="item item-exp4">
+                    <img src="./static/images/comp_gen4.png" style="width:100%; " />
+                  </div>
+                  <div class="item item-exp5">
+                    <img src="./static/images/comp_gen5.png" style="width:100%; " />
+                  </div>
+                  <div class="item item-exp6">
+                    <img src="./static/images/comp_gen6.png" style="width:100%; " />
+                  </div>
+                  <div class="item item-exp7">
+                    <img src="./static/images/comp_gen7.png" style="width:100%; " />
+                  </div>
+                  <div class="item item-exp8">
+                    <img src="./static/images/comp_gen8.png" style="width:100%; " />
+                  </div>
+                  <div class="item item-exp9">
+                    <img src="./static/images/comp_gen9.png" style="width:100%; " />
+                  </div>
+                  <div class="item item-exp10">
+                    <img src="./static/images/comp_gen10.png" style="width:100%; " />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <h3 class="title is-5">More comparsions on real-world or unknown degradation type images.</h3>
+
+        <div class="container is-max-desktop">
+          <section class="hero is-light is-small">
+            <div class="hero-body">
+              <div class="container" style="text-align:center">
+                <div id="results-carousel" class="carousel results-carousel">
+                  <div class="item item-exp1">
+                    <img src="./static/images/comp_real1.png" style="width:100%; " />
+                  </div>
+                  <div class="item item-exp2">
+                    <img src="./static/images/comp_real2.png" style="width:100%; " />
+                  </div>
+                  <div class="item item-exp3">
+                    <img src="./static/images/comp_real3.png" style="width:100%; " />
+                  </div>
+                  <div class="item item-exp4">
+                    <img src="./static/images/comp_real4.png" style="width:100%; " />
+                  </div>
+                  <div class="item item-exp5">
+                    <img src="./static/images/comp_real5.png" style="width:100%; " />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <!-- </div> -->
+      </div>
+      <!-- </div> -->
+      <!--/ Adaptation to 2D Stylization. -->
+
+
+      <!-- Appearance Editing. -->
+      
+      <!--/ Appearance Editing. -->
+
+      <!-- Controllability. -->
+      
+      <!--/ Controllability. -->
+
+      <!-- Multi-Reference. -->
+
+      <!--/ Multi-Reference. -->
+
+      <!-- </div> -->
+      <!-- </div>
+      </div> -->
+
+      <!--/ Extensions. -->
+
+      <!-- </div>
+      </section> -->
+      
+
+      <div class="column has-text-justified is-centered" style="text-align:center">
+        <br>
+        <h3 class="title is-3">Methods</h3>
+        <img src="./static/images/framework.png" style="width:100%" />
+        <p>
+          Our CoSeR employs a dual-stage process for restoring LR images. Initially, we develop a cognitive encoder 
+          to conduct a thorough analysis of the image content, conveying the cognitive embedding to the diffusion model. 
+          This enables the activation of pre-existing image priors within the pre-trained Stable Diffusion model, 
+          facilitating the restoration of intricate details. Additionally, 
+          our approach utilizes cognitive understanding to generate high-fidelity reference images that closely align with the input semantics. 
+          These reference images serve as auxiliary information, contributing to the enhancement of super-resolution results. 
+          Ultimately, our model simultaneously applies three conditional controls to the pre-trained Stable Diffusion model: the LR image, cognitive embedding, and reference image.
+        </p>
+      </div>
+
+      <div class="column has-text-justified is-centered" style="text-align:center">
+        <br>
+        <h3 class="title is-5">Explanations for using the cognitive embedding.</h3>
+        <img src="./static/images/explaination.png" style="width:100%" />
+        <p>
+          We choose to utilize the feature embedding for the cognition process rather than directly generating a caption from LR for several compelling reasons. 
+          Firstly, although guided by language embedding, our cognitive embedding retains fine-grained image features, 
+          proving advantageous in generating reference images with high semantic similarity. 
+          In the first row of the figure above, we show the BLIP2 captions generated from LR images. 
+          They fail to identify the precise taxon, color, and texture of the animals, 
+          leading to suboptimal generations compared to our cognitive adapter. 
+          Secondly, pre-trained image caption models may produce inaccurate captions for LR images due to disparities in the input distribution. 
+          In contrast, our cognitive adapter is more robust for LR images, shown in the second row of the figure above.
+          Thirdly, employing a pre-trained image caption model requires a substantial number of parameters, potentially reaching 7B. In contrast, our cognitive adapter is significantly lighter, 
+          with only 3% parameters, resulting in favorable efficiency. 
+        </p>
+      </div>
+
+      <!-- <section class="section" id="BibTeX">
+        <div class="container is-max-desktop content">
+          <h2 class="title">BibTeX</h2>
+          <pre><code>@article{zhang2023realworld,
+  title={Real-World Image Variation by Aligning Diffusion Inversion Chain}, 
+  author={Yuechen Zhang and Jinbo Xing and Eric Lo and Jiaya Jia},
+  journal={arXiv preprint arXiv:2305.18729},
+  year={2023},
+}
+      </code></pre>
+        </div>
+      </section> -->
+
+
+      <footer class="footer">
+        <div class="container">
+          <div class="content has-text-centered">
+            <!-- <a class="icon-link" href="" disabled>
+              <i class="fas fa-file-pdf"></i>
+            </a>
+            <a class="icon-link external-link" href="https://coser-main.github.io/" disabled>
+              <i class="ai ai-arxiv"></i>
+            </a> -->
+            <a class="icon-link external-link" href="https://github.com/VINHYU/CoSeR" disabled>
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+          <div class="columns is-centered">
+            <div class="column is-8">
+              <div class="content">
+                <p>
+                  This website is licensed under a <a rel="license"
+                    href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                    Commons Attribution-ShareAlike 4.0 International License</a>.
+                </p>
+                <p>
+                  Website template credit to <a href="https://nerfies.github.io/">Nerfies</a>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+</body>
+
+</html>
