@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon2.png">
+  <link rel="icon" href="./static/images/favicon.png">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -51,7 +51,7 @@
                 <a href="https://people.ucas.ac.cn/~jzliu?language=en" target="_blank">Jianzhuang Liu</a><sup>2</sup>,
               </span>
               <span class="author-block">
-                Haoyu Chen</a><sup>3</sup>,</span>
+                Haoyu Chen</a><sup>3</sup>,</span> <br>
               <span class="author-block">
                 Renjing Pei</a><sup>2</sup>,</span>
               <span class="author-block">
@@ -71,28 +71,28 @@
             <div class="column has-text-centered">
               <div class="publication-links">
                 <!-- PDF Link. -->
-                <!-- <span class="link-block">
-                  <a href="https://arxiv.org/pdf/2305.18729.pdf" class="button is-normal is-rounded is-dark" target="_blank">
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2311.16512.pdf" class="button is-normal is-rounded is-dark" target="_blank">
                     <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                     </span>
                     <span>Paper</span>
                   </a>
-                </span> -->
+                </span>
                 <!-- Arxiv Link. -->
-                <!-- <span class="link-block">
-                  <a href="https://arxiv.org/abs/2305.18729" class="external-link button is-normal is-rounded is-dark" target="_blank">
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2311.16512" class="external-link button is-normal is-rounded is-dark" target="_blank">
                     <span class="icon">
                       <i class="ai ai-arxiv"></i>
                     </span>
                     <span>arXiv</span>
                   </a>
-                </span> -->
+                </span>
                 <!-- Video Link. -->
                 <!-- Code Link. -->
                 <span class="link-block">
                   <a href="https://github.com/VINHYU/CoSeR"
-                    class="external-link button is-normal is-rounded is-dark">
+                    class="external-link button is-normal is-rounded is-dark" target="_blank">
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
@@ -181,13 +181,12 @@
               <li> 
                 Existing SR methods face limitations in generalization, particularly when confronted with degradation distributions 
                 deviating from the training set (<b>first row of the figure above</b>). Typically, enhancing SR performance involves training the model on 
-                scene-specific data acquired from a particular sensor. While effective for learning the mapping between low and high definition 
-                images in specific scenes, this approach exhibits poor performance in diverse scenarios.
+                scene-specific data acquired from a particular sensor, which works well for those scenes but poorly in varied scenarios.
                 <br />
               <li> 
                 Current SR methods lack a comprehensive understanding of image content. 
-                They primarily focus on learning image degradation patterns from extensive data, overlooking the semantic understanding of LR images. 
-                Consequently, these methods struggle to employ common sense in accurately recovering object structures and textures  (<b>second row of the figure above</b>).
+                These methods excel in learning degradation patterns from data but struggle in semantic understanding of LR images, 
+                affecting object structure and texture recovery (<b>second row of the figure above</b>).
                 <br />
             </div>
           </div>
@@ -205,7 +204,7 @@
               <br />
               <br />
               <h2 class="subtitle">
-                Outline Pipeline
+                Outline
               </h2>
               Our method can extract <b style="color: #eab332">cognitive embedding</b> from a LR input image, 
               comprehensively grasping the entire scene content. 
@@ -387,30 +386,30 @@
         </p>
       </div>
 
-      <!-- <section class="section" id="BibTeX">
+      <section class="section" id="BibTeX">
         <div class="container is-max-desktop content">
           <h2 class="title">BibTeX</h2>
-          <pre><code>@article{zhang2023realworld,
-  title={Real-World Image Variation by Aligning Diffusion Inversion Chain}, 
-  author={Yuechen Zhang and Jinbo Xing and Eric Lo and Jiaya Jia},
-  journal={arXiv preprint arXiv:2305.18729},
+          <pre><code>@article{sun2023coser,
+  title={CoSeR: Bridging Image and Language for Cognitive Super-Resolution}, 
+  author={Haoze Sun and Wenbo Li and Jianzhuang Liu and Haoyu Chen and Renjing Pei and Xueyi Zou and Youliang Yan and Yujiu Yang},
+  journal={arXiv preprint arXiv:2311.16512},
   year={2023},
 }
       </code></pre>
         </div>
-      </section> -->
+      </section>
 
 
       <footer class="footer">
         <div class="container">
           <div class="content has-text-centered">
-            <!-- <a class="icon-link" href="" disabled>
+            <a class="icon-link" href="https://arxiv.org/pdf/2311.16512.pdf" disabled  target="_blank">
               <i class="fas fa-file-pdf"></i>
             </a>
-            <a class="icon-link external-link" href="https://coser-main.github.io/" disabled>
+            <a class="icon-link external-link" href="https://arxiv.org/abs/2311.16512" disabled  target="_blank">
               <i class="ai ai-arxiv"></i>
-            </a> -->
-            <a class="icon-link external-link" href="https://github.com/VINHYU/CoSeR" disabled>
+            </a>
+            <a class="icon-link external-link" href="https://github.com/VINHYU/CoSeR" disabled  target="_blank">
               <i class="fab fa-github"></i>
             </a>
           </div>
