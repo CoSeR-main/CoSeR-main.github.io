@@ -19,6 +19,7 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <!-- <script src="./static/js/bulma-slider.min.js"></script> -->
   <script src="./static/js/index.js"></script>
+  <link rel="stylesheet" href="./static/css/style.css">
 </head>
 
 <body>
@@ -244,9 +245,14 @@
       <div class="content has-text-justified">
         <br>
         <h2 class="title is-3">Comparsions</h2>
-        <div style="display: flex; justify-content: center; align-items: center;">
-          <img src="./static/images/comp_v2.png" width="100%" />
+        <!-- <div style="display: flex; justify-content: center; align-items: center;">
+          <img src="./static/images/comp.png" width="100%" />
+        </div> -->
+        <div class="image-container">
+          <img src="./static/images/comp.png" alt="Image" id="original-image">
+          <div class="magnifier"></div>
         </div>
+        <script src="./static/js/script.js"></script>
         
         <p>
           Enriched by a comprehensive understanding of scene information, CoSeR excels in enhancing high-quality 
